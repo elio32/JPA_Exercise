@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
  public final class EntityManagerConfiguration {
 
-        private static final EntityManagerFactory FACTORY = Persistence.createEntityManagerFactory("jpa-intro");
+        private static final EntityManagerFactory FACTORY = Persistence.createEntityManagerFactory("jpa_exercise_db");
         private static final EntityManager ENTITY_MANAGER = FACTORY.createEntityManager();
         private EntityManagerConfiguration() {}
         public static EntityManager getEntityManager() {
