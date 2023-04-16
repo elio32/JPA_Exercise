@@ -4,7 +4,7 @@ import org.example.model.enums.FlightStatusEnum;
 
 import java.util.Date;
 
-public class FlightTDO {
+public class FlightDTO {
     private Long id;
     private String origin;
     private String destination;
@@ -14,7 +14,7 @@ public class FlightTDO {
     private Date arrivalDate;
     private FlightStatusEnum status;
 
-    public FlightTDO() {
+    public FlightDTO() {
     }
 
     public Long getId() {

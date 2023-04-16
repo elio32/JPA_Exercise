@@ -1,9 +1,8 @@
 package org.example.service.impl;
 
 import org.example.mapper.FlightMapper;
-import org.example.model.dto.FlightTDO;
+import org.example.model.dto.FlightDTO;
 import org.example.model.entity.Flight;
-import org.example.repository.FlightRepository;
 import org.example.repository.impl.FlightRepositoryImpl;
 import org.example.service.FlightService;
 
@@ -21,31 +20,31 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public List<FlightTDO> loadAllFlights() {
+    public List<FlightDTO> loadAllFlights() {
         return flightRepository.findAll().stream().map(flightMapper::toDto).collect(Collectors.toList());
 
     }
 
     @Override
-    public List<FlightTDO> deleteFlight(Flight flight) {
+    public List<FlightDTO> deleteFlight(Flight flight) {
         return flightRepository.delete(flight).stream().map(flightMapper::toDto).collect(Collectors.toList());
 
     }
 
     @Override
-    public List<FlightTDO> findFlightById(Long id) {
+    public List<FlightDTO> findFlightById(Long id) {
         return flightRepository.findById(id).stream().map(flightMapper::toDto).collect(Collectors.toList());
 
     }
 
     @Override
-    public List<FlightTDO> saveNewFlight(Flight flight) {
+    public List<FlightDTO> saveNewFlight(Flight flight) {
         return flightRepository.save(flight).stream().map(flightMapper::toDto).collect(Collectors.toList());
 
     }
 
     @Override
-    public List<FlightTDO> findByOrigin(String origin) {
+    public List<FlightDTO> findByOrigin(String origin) {
         return flightRepository.findByOrigin(origin).stream().map(flightMapper::toDto).collect(Collectors.toList());
     }
 }

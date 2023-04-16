@@ -1,20 +1,20 @@
 package org.example.mapper;
 
-import org.example.model.dto.BookingTDO;
+import org.example.model.dto.BookingDTO;
 import org.example.model.entity.Booking;
 
-public class BookingMapper extends AbstractMapper<Booking, BookingTDO>{
+public class BookingMapper extends AbstractMapper<Booking, BookingDTO>{
     @Override
-    public Booking toEntity(BookingTDO bookingTDO) {
+    public Booking toEntity(BookingDTO bookingDTO) {
         return null;
     }
 
     @Override
-    public BookingTDO toDto(Booking booking) {
-        BookingTDO bookingTDO = new BookingTDO();
-        bookingTDO.setId(booking.getId());
-        bookingTDO.setBookingDate(booking.getBookingDate());
-        bookingTDO.setStatus(booking.getStatus());
-        return bookingTDO;
+    public BookingDTO toDto(Booking booking) {
+        BookingDTO bookingDTO = new BookingDTO();
+        bookingDTO.setId(booking.getId());
+        bookingDTO.setBookingDate(booking.getBookingDate());
+        bookingDTO.setStatus(booking.getStatus());
+        return bookingDTO;
     }
 }

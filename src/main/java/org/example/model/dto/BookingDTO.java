@@ -1,15 +1,14 @@
 package org.example.model.dto;
-
 import org.example.model.enums.BoookingStatusEnum;
 
 import java.util.Date;
 
-public class BookingTDO {
+public class BookingDTO {
     private Long id;
     private Date bookingDate;
     private BoookingStatusEnum status;
 
-    public BookingTDO() {
+    public BookingDTO() {
     }
 
     public Long getId() {
@@ -26,9 +25,10 @@ public class BookingTDO {
 
     public void setBookingDate(Date bookingDate) {
         this.bookingDate = bookingDate;
+
     }
 
-    public BoookingStatusEnum getStatus() {
+        public BoookingStatusEnum getStatus() {
         return status;
     }
 
